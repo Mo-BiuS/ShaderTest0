@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=4 uid="uid://ctvin3wgbqeo"]
+
+[ext_resource type="Texture2D" uid="uid://djstr46akxyxt" path="res://Sokoban.png" id="1_bcb0y"]
+[ext_resource type="Shader" uid="uid://bgospou1uyv8i" path="res://Arena.gdshader" id="1_u45fm"]
+[ext_resource type="Script" uid="uid://dpflck2fy18rj" path="res://GroundLayer.gd" id="3_vbyki"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u45fm"]
+shader = ExtResource("1_u45fm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u45fm"]
+texture = ExtResource("1_bcb0y")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/left_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/terrain = 1
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_side = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0/terrains_peering_bit/top_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0/terrains_peering_bit/left_side = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:3/0/terrains_peering_bit/right_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_vbyki"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Wall"
+terrain_set_0/terrain_0/color = Color(0.496484, 0.261878, 0.62037, 1)
+terrain_set_0/terrain_1/name = "Tile"
+terrain_set_0/terrain_1/color = Color(0.403634, 0.394497, 0.724972, 1)
+sources/2 = SubResource("TileSetAtlasSource_u45fm")
+
+[node name="Arena" type="Node2D"]
+
+[node name="TileMaps" type="Node2D" parent="."]
+
+[node name="GroundLayer" type="TileMapLayer" parent="TileMaps"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_u45fm")
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAADAAQAAgAEAAAAAAAEAAQAAgAEAAAAAAAFAAQAAgAEAAAAAAAGAAQAAgAEAAAAAAAHAAQAAgAEAAAAAAAIAAQAAgAEAAAAAAAJAAQAAgAEAAAAAAAKAAQAAgAEAAAAAAALAAQAAgAEAAAAAAAMAAQAAgAEAAAAAAAMAAUAAgAEAAAAAAAJAAMAAgAEAAAAAAAGAAUAAgAEAAAAAAADAAMAAgAEAAAAAAACAAQAAgAEAAAAAAADAAIAAgAEAAAAAAAEAAIAAgAEAAAAAAAFAAIAAgAEAAAAAAAFAAMAAgAEAAAAAAAFAAUAAgAEAAAAAAAFAAYAAgAEAAAAAAAGAAYAAgAEAAAAAAAHAAUAAgAEAAAAAAAIAAUAAgAEAAAAAAAJAAUAAgAEAAAAAAAKAAUAAgAEAAAAAAALAAUAAgAEAAAAAAALAAYAAgAEAAAAAAAMAAYAAgAEAAAAAAAIAAMAAgAEAAAAAAAEAAMAAgADAAMAAAABAAQAAgADAAEAAAABAAMAAgAAAAAAAAACAAMAAgACAAIAAAACAAIAAgADAAEAAAACAAEAAgAAAAAAAAADAAEAAgABAAMAAAAEAAEAAgABAAMAAAAFAAEAAgABAAMAAAAGAAEAAgACAAAAAAAGAAIAAgAAAAEAAAAGAAMAAgAAAAIAAAAHAAMAAgACAAIAAAAHAAIAAgABAAAAAAAIAAIAAgABAAMAAAAJAAIAAgABAAMAAAAKAAIAAgACAAAAAAAKAAMAAgAAAAIAAAALAAMAAgABAAMAAAAMAAMAAgABAAMAAAANAAMAAgACAAAAAAANAAQAAgADAAEAAAANAAUAAgADAAEAAAANAAYAAgADAAEAAAANAAcAAgACAAIAAAAMAAcAAgABAAMAAAALAAcAAgABAAMAAAAKAAcAAgAAAAIAAAAKAAYAAgACAAAAAAAJAAYAAgABAAMAAAAIAAYAAgABAAMAAAAHAAYAAgAAAAAAAAAHAAcAAgACAAIAAAAGAAcAAgABAAMAAAAFAAcAAgABAAMAAAAEAAcAAgAAAAIAAAAEAAYAAgADAAEAAAAEAAUAAgACAAAAAAADAAUAAgABAAMAAAACAAUAAgABAAMAAAABAAUAAgAAAAIAAAA=")
+tile_set = SubResource("TileSet_vbyki")
+rendering_quadrant_size = 32
+script = ExtResource("3_vbyki")
