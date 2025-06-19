@@ -1,15 +1,20 @@
 shader_type canvas_item;
 
-uniform sampler2D bitcodeMap;
-varying vec2 vertex_local;
-
-void vertex() {
-	VERTEX.x+=sin(TIME);
-	VERTEX.y+=cos(TIME);
-	vertex_local = VERTEX;
-}
+uniform int[32*32] bitcodeMap;
+uniform vec2 offSet;
+uniform vec2 tileSize;
 
 void fragment() {
-	vec4 tex_color = texture(TEXTURE, UV);
-	COLOR = vec4(tex_color.r-(vertex_local.x/2000.0),tex_color.g,tex_color.b,.8);
+	ivec2 tilePos = ivec2(((FRAGCOORD.xy)/tileSize/2.)) ;
+	int code = bitcodeMap[tilePos.x*32+tilePos.y];
+	
+	
+	if (code > 0) {
+		vec4 tex_color = texture(TEXTURE, UV);
+		if(mod(float(code), 2.) >= 1.)tex_color.r+=.2;
+		if(mod(float(code)/2., 2.) >= 1.)tex_color.r+=.2;;
+		if(mod(float(code)/4., 2.) >= 1.)tex_color.r+=.2;;
+		if(mod(float(code)/8., 2.) >= 1.)tex_color.r+=.2;;
+		COLOR = vec4(tex_color.rgb, 1.0);
+	}
 }
